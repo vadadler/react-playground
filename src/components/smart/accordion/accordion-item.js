@@ -22,7 +22,7 @@ export default class AccordionItem extends React.Component {
   }
 
   render() {
-    const {dataModel, viewModel, index, data} = this.props;
+    const {dataModel, index, data} = this.props;
 
     var content = [
       <List style={{padding: '10px', backgroundColor: 'transparent'}}>

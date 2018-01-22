@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
+    "babel-plugin-transform-decorators-legacy": "*",
+    "material-ui": "*",
+    "mobx": "^3.0.0",
+    "mobx-react": "^4.1.0",
+    "mobx-react-devtools": "^4.2.11",
+    "react": "^16.0.0",
+    "react-dnd": "*",
+    "react-dnd-html5-backend": "*",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
   },

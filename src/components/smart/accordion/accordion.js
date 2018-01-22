@@ -9,7 +9,7 @@ import AccordionItem from './accordion-item';
 @observer
 export default class Accordion extends React.Component {
   render() {
-    const {dataModel, viewModel, data} = this.props;
+    const {dataModel, data} = this.props;
     let accordionInstance = this;
 
     return (
