@@ -18,10 +18,10 @@ export default class Application extends React.Component {
 
   render() {
     const {dataModel} = this.props;
-    const styles = this.getStyles();
+    //const styles = this.getStyles();
 
     return (
-      <div style={styles.root}>
+      <div>
         Hello 2!
       </div>
    );
