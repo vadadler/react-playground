@@ -1,9 +1,9 @@
-import {extendObservable} from 'mobservable';
+import {extendObservable} from 'mobx';
 
 export default class DataModel {
   constructor() {
     extendObservable(this, {
-      
+
     });
   }
 }
