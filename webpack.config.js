@@ -54,12 +54,12 @@ module.exports = {
       allChunks: true
     }),
     new DashboardPlugin(),
-    // new HtmlWebpackPlugin({
-    //   template: './src/template.html',
-    //   files: {
-    //     css: ['style.css'],
-    //     js: [ "bundle.js"],
-    //   }
-    // }),
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+      files: {
+        css: ['style.css'],
+        js: [ "bundle.js"],
+      }
+    }),
   ]
 };

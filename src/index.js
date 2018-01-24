@@ -7,19 +7,13 @@ import ReactDOM from 'react-dom';
 
 import DataModel from './stores/data-model';
 
-document.documentElement.style.height='100%';
-document.body.style.height='100%';
-
-const rootDiv = document.createElement('div');
-rootDiv.style.height = '100%';
-
-document.body.appendChild(rootDiv);
-
 let dataModel = new DataModel();
 
 ReactDOM.render(
-    <Application dataModel={dataModel} />, 
-    rootDiv);
+    <AppContainer>
+        <Application dataModel={dataModel} />
+    </AppContainer>,
+    document.getElementById('app'));
 
     //registerServiceWorker();
 
