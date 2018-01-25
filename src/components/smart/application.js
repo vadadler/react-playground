@@ -7,6 +7,9 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import {observer} from 'mobx-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import MyAppBar from './appbar';
+
+
 //import utils from '../../classes/utils';
 
 @DragDropContext(HTML5Backend)
@@ -22,8 +25,9 @@ export default class Application extends React.Component {
 
     return (
       <div>
-        Hello 2!
+          <MyAppBar />
       </div>
    );
   }
 }
+
