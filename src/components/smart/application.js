@@ -25,7 +25,7 @@ export default class Application extends React.Component {
 
     return (
       <div>
-          <MyAppBar />
+          <MyAppBar color="red" />
       </div>
    );
   }
