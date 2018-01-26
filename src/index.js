@@ -6,12 +6,14 @@ import ReactDOM from 'react-dom';
 //import registerServiceWorker from './registerServiceWorker';
 
 import DataModel from './stores/data-model';
+import ViewModel from './stores/view-model';
 
 let dataModel = new DataModel();
+let viewModel = new viewModel();
 
 ReactDOM.render(
     <AppContainer>
-        <Application dataModel={dataModel} />
+        <Application dataModel={dataModel} viewModel={viewModel} />
     </AppContainer>,
     document.getElementById('app'));
 

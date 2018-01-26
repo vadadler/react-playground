@@ -1,10 +1,10 @@
 import React from 'react';
-import Colors from 'material-ui/lib/styles/colors';
-import HardwareDeviceHub from 'material-ui/lib/svg-icons/hardware/device-hub';
-import DeviceDevices from 'material-ui/lib/svg-icons/device/devices';
-import MapsPlace from 'material-ui/lib/svg-icons/maps/place';
-import MapsDirectionsWalk from 'material-ui/lib/svg-icons/maps/directions-walk';
-import SocialPerson from 'material-ui/lib/svg-icons/social/person';
+import Colors from 'material-ui/styles/colors';
+import HardwareDeviceHub from 'material-ui/svg-icons/hardware/device-hub';
+import DeviceDevices from 'material-ui/svg-icons/device/devices';
+import MapsPlace from 'material-ui/svg-icons/maps/place';
+import MapsDirectionsWalk from 'material-ui/svg-icons/maps/directions-walk';
+import SocialPerson from 'material-ui/svg-icons/social/person';
 
 export const ItemTypes = {
   CONDITION: 'condition',
