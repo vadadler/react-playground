@@ -1,4 +1,4 @@
-import {extendObservable} from 'mobservable';
+import {extendObservable} from 'mobx';
 import {Screen} from '../constants';
 
 /*

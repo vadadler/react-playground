@@ -16,16 +16,19 @@ import MyAppBar from './appbar';
 @observer
 export default class Application extends React.Component {
   static propTypes = {
-    dataModel: PropTypes.object.isRequired
+    dataModel: PropTypes.object.isRequired,
+    viewModel: PropTypes.object.isRequired
   };
 
   render() {
     const {dataModel} = this.props;
+    const {viewModel} = this.props;
+
     //const styles = this.getStyles();
 
     return (
       <div>
-          <MyAppBar color="red" />
+          <MyAppBar dataModel={dataModel} viewModel={viewModel} />
       </div>
    );
   }

@@ -24,6 +24,10 @@ const styles = {
 
 function MyAppBar(props) {
   const { classes } = props;
+  // const {dataModel} = this.props;
+  // const {viewModel} = this.props;
+
+  
   return (
     <div className={classes.root}>
       <AppBar position="static" >
@@ -34,15 +38,21 @@ function MyAppBar(props) {
           <Typography type="title" color="inherit" className={classes.flex}>
             Title
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={()=>login()}>Login</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
+function login() {
+  console.log("HAHAHAHA");
+}
+
 MyAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
+  dataModel: PropTypes.object.isRequired,
+  viewModel: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(MyAppBar);

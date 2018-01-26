@@ -1,10 +1,10 @@
 import React from 'react';
-import Colors from 'material-ui/styles/colors';
-import HardwareDeviceHub from 'material-ui/svg-icons/hardware/device-hub';
-import DeviceDevices from 'material-ui/svg-icons/device/devices';
-import MapsPlace from 'material-ui/svg-icons/maps/place';
-import MapsDirectionsWalk from 'material-ui/svg-icons/maps/directions-walk';
-import SocialPerson from 'material-ui/svg-icons/social/person';
+import grey from 'material-ui/colors';
+import DeviceDevices from 'material-ui-icons/devices';
+import HardwareDeviceHub from 'material-ui-icons/devicehub';
+import MapsPlace from 'material-ui-icons/place';
+import MapsDirectionsWalk from 'material-ui-icons/directionswalk';
+import SocialPerson from 'material-ui-icons/person';
 
 export const ItemTypes = {
   CONDITION: 'condition',
@@ -12,14 +12,26 @@ export const ItemTypes = {
 };
 
 // Icons.
-let connectionIcon = <HardwareDeviceHub color={Colors.grey700}/>;
-let deviceIcon = <DeviceDevices color={Colors.grey700}/>;
-let locationIcon = <MapsPlace color={Colors.grey700}/>;
-let identityIcon = <SocialPerson color={Colors.grey700}/>;
+let connectionIcon = <HardwareDeviceHub color={grey}/>;
+let deviceIcon = <DeviceDevices color={700}/>;
+let locationIcon = <MapsPlace color={700}/>;
+let identityIcon = <SocialPerson color={700}/>;
 
 export const CategoryIcons = {
   'CONNECTION': connectionIcon,
   'DEVICE': deviceIcon,
   'LOCATION': locationIcon,
   'IDENTITY': identityIcon
+};
+
+// Name of screens. Used when transitioning between screens.
+export const Screen = {
+  DASHBOARD: 'dashboard',
+  POLICY: 'policy',
+  APPLICATIONS: 'applicaions',
+  CONNECTIONS: 'connections',
+  ANALYTICS: 'analytics',
+  LOGIN: 'login',
+  SETTINGS: 'settings',
+  EMPTY: ''
 };
