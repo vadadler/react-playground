@@ -5,16 +5,13 @@ import TableBody from 'material-ui/table/tablebody';
 import TableRow from 'material-ui/table/tablerow';
 import TableRowColumn from 'material-ui/table/tablerowcolumn';
 import Dialog from 'material-ui/dialog';
-import LinearProgress from 'material-ui/linear-progress';
+import LinearProgress from 'material-ui/progress/linearprogress';
 import Card from 'material-ui/card/card';
-import CardActions from 'material-ui/card/card-actions';
-import CardExpandable from 'material-ui/card/card-expandable';
-import CardHeader from 'material-ui/card/card-header';
-import CardMedia from 'material-ui/card/card-media';
-import CardText from 'material-ui/card/card-text';
-import CardTitle from 'material-ui/card/card-title';
-import TextField from 'material-ui/text-field';
-import RaisedButton from 'material-ui/raised-button';
+import CardActions from 'material-ui/card/cardactions';
+import CardMedia from 'material-ui/card/cardmedia';
+import CardTitle from 'material-ui/card/cardheader';
+import TextField from 'material-ui/textfield';
+import Button from 'material-ui/button';
 import {Screen} from '../../constants';
 import {observer} from 'mobservable-react';
 
@@ -76,7 +73,7 @@ export default class Login extends React.Component {
                 <TableRow>
                   <TableRowColumn/>
                   <TableRowColumn colSpan='3' style={{textAlign: 'center'}}>
-                    <RaisedButton
+                    <Button
                       ref='loginButton'
                       onTouchTap={()=>this.handleLogin()}
                       label={utils.translate('buttons.login')}
@@ -101,7 +98,7 @@ export default class Login extends React.Component {
     return(
       <Dialog
         modal={true}
-        open={viewModel.activeScreen === Screen.LOGIN}
+        open={true}//viewModel.activeScreen === Screen.LOGIN}
         children={content}
         contentStyle={customContentStyle}
         autoScrollBodyContent={true}

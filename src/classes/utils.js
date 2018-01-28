@@ -1,6 +1,5 @@
 import {Screen} from '../constants';
 import auth from './auth-service';
-import PolicyEditorContainer from '../components/dumb/policy-editor-container';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

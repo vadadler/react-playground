@@ -8,6 +8,7 @@ import {observer} from 'mobx-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import MyAppBar from './appbar';
+import Login from './login';
 
 
 //import utils from '../../classes/utils';
@@ -20,15 +21,20 @@ export default class Application extends React.Component {
     viewModel: PropTypes.object.isRequired
   };
 
-  render() {
-    const {dataModel} = this.props;
-    const {viewModel} = this.props;
+  componentWillMount() {
+    //if (auth.loggedIn() !== true) {
+      this.props.viewModel.activeScreen = Screen.LOGIN;
+    //}
+  }
 
+  render() {
+    const {dataModel, viewModel} = this.props;
     //const styles = this.getStyles();
 
     return (
       <div>
           <MyAppBar dataModel={dataModel} viewModel={viewModel} />
+          <Login dataModel={dataModel} viewModel={viewModel} /> 
       </div>
    );
   }

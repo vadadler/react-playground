@@ -1,8 +1,7 @@
 
 import auth from '../../classes/auth-service';
-import Dialog from 'material-ui/lib/dialog';
-import FlatButton from 'material-ui/lib/flat-button';
-import RaisedButton from 'material-ui/lib/raised-button';
+import Dialog from 'material-ui/dialog';
+import Button from 'material-ui/button';
 import React from 'react';
 import {observer} from 'mobservable-react';
 import {Screen} from '../../constants';
@@ -33,7 +32,7 @@ export default class Info extends React.Component {
     const viewModel = this.props.viewModel;
 
     const actions = [
-      <FlatButton
+      <Button
         label={utils.translate('buttons.ok')}
         onTouchTap={this.handleClose}
       />,
