@@ -1,28 +1,27 @@
 module.exports = {
   application: {
-    appName: 'Context Connector',
-    appNameFull: 'Situational Context Connector',
+    appName: 'React Playground',
+    appNameFull: 'ReactJS Playground Application',
     // Footer.
-    appCopyright: '\xA9 2016 Situational Inc',
+    appCopyright: '\xA9 2018',
     //Appbar.
     menuItemHelp: 'Help',
     menuItemSignOut: 'Logout     ',
-    menuItemPolicyEditor: 'Policy Editor',
     menuItemAccount: 'Account',
     menuItemSettings: 'Settings',
     menuItemAbout: 'About'
   },
   login: {
     // Debug.
-    debugUserName: 'user@situationalcorp.com',
+    debugUserName: 'user@mycompany.com',
     debugPassword:'password',
 
     emailHintText: 'user@example.com',
     loginFloatingLabelText: 'Username',
     loginHintTextPwd: 'Password Field',
     loginFloatingLabelTextPwd: 'Password',
-    cardTitle: 'Sign in to Context Connector',
-    imageURL: 'http://situationalcorp.com/wp-content/uploads/2015/11/hero-image.jpg'
+    cardTitle: 'Sign in to React Playground',
+    imageURL: 'https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/44-researcherss.jpg'
   },
   buttons: {
     login: 'login',
@@ -32,7 +31,7 @@ module.exports = {
   },
   about: {
     title: 'About',
-    content: 'Context Connector'
+    content: 'ReactJS Playground Application'
   },
   errors: {
     LOGIN_INCORRECT_USER_PASSWORD: 'Incorrect user name or password',

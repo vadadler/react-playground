@@ -3,7 +3,8 @@ import auth from '../../classes/auth-service';
 import Dialog from 'material-ui/dialog';
 import Button from 'material-ui/button';
 import React from 'react';
-import {observer} from 'mobservable-react';
+import PropTypes from 'prop-types';
+import {observer} from 'mobx-react';
 import {Screen} from '../../constants';
 import utils from '../../classes/utils';
 
@@ -54,6 +55,6 @@ export default class Info extends React.Component {
 }
 
 Info.propTypes = {
-	viewModel: React.PropTypes.object.isRequired,
-	dataModel: React.PropTypes.object.isRequired
+	viewModel: PropTypes.object.isRequired,
+	dataModel: PropTypes.object.isRequired
 };

@@ -15,14 +15,7 @@ class AuthService {
   }
 
   logout(properties) {
-    let Promise = this.Promise || require('promise');
-    let agent = require('superagent-promise')(require('superagent'), Promise);
-
     // Logout.
-    agent('GET', properties.viewModel.endpoint + '/api/v1/users/logout')
-      .then(function onResult(res) {
-      }, function onError(err) {
-      });
 
     this.deleteToken();
 
