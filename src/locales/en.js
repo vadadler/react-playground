@@ -20,8 +20,7 @@ module.exports = {
     loginFloatingLabelText: 'Username',
     loginHintTextPwd: 'Password Field',
     loginFloatingLabelTextPwd: 'Password',
-    cardTitle: 'Sign in to React Playground',
-    imageURL: 'https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/44-researcherss.jpg'
+    cardTitle: 'Sign in to React Playground'
   },
   buttons: {
     login: 'login',

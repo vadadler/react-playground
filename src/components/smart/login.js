@@ -6,6 +6,7 @@ import TableRow from 'material-ui/table/tablerow';
 import Dialog from 'material-ui/dialog';
 import LinearProgress from 'material-ui/progress/linearprogress';
 import Card from 'material-ui/card/card';
+import CardContent from 'material-ui/card/cardcontent';
 import CardActions from 'material-ui/card/cardactions';
 import CardMedia from 'material-ui/card/cardmedia';
 import CardTitle from 'material-ui/card/cardheader';
@@ -13,13 +14,28 @@ import TextField from 'material-ui/textfield';
 import Button from 'material-ui/button';
 import {Screen} from '../../constants';
 import {observer} from 'mobx-react';
+import Typography from 'material-ui/Typography';
 
 import auth from '../../classes/auth-service';
 import utils from '../../classes/utils';
 import info from '../dumb/info';
 
+
 @observer
 export default class Login extends React.Component {
+
+  getStyles() {
+    return {
+      card: {
+        maxWidth: 345,
+        maxHeight: 300
+      },
+      media: {
+        height: 200,
+      }
+    }
+  }
+  
   componentDidMount() {
     // If not logged on show login screen.
     if(auth.loggedIn() !== true) {
@@ -29,46 +45,23 @@ export default class Login extends React.Component {
 
   render() {
     const {dataModel, viewModel} = this.props;
-    
+    const styles = this.getStyles();
+
     const content = [
       <div style={{width:'100%'}}>
-        <Card initiallyExpanded={true}>
-          <CardMedia overlay={<CardTitle title={utils.translate('login.cardTitle')}/>} >
-            <img src={utils.translate('dataModel.imageURL')}/>
+        <Card initiallyExpanded={true} style={styles.card}>
+          <CardMedia overlay={<CardTitle title={utils.translate('login.cardTitle')}/>} style={styles.media} >
+            <img src={dataModel.imageURL}/>
           </CardMedia>
+          <CardContent>
+            <Typography type="headline" component="h2">
+              Blah
+            </Typography>
+            <Typography component="p">
+              Blah...blah...blah
+            </Typography>
+          </CardContent>
           <CardActions expandable={true}>
-            <Table
-              style={{maxWidth:'100%', 'marginRight':'0px'}}
-              selectable={false}
-              fixedHeader={false}
-              fixedFooter={false}>
-              <TableBody
-                style={{maxWidth:'100%'}}
-                displayRowCheckbox={false}>
-              <TableRow displayBorder={false} colSpan='3'>
-                  <TextField
-                    ref='username'
-                    hintText={utils.translate('login.emailHintText')}
-                    defaultValue={utils.translate('login.debugUserName')}
-                    floatingLabelText={utils.translate('login.loginFloatingLabelText')} />
-                </TableRow>
-                <TableRow displayBorder={false} colSpan='3'>
-                    <TextField
-                      ref='password'
-                      hintText={utils.translate('login.loginHintTextPwd')}
-                      defaultValue={utils.translate('login.debugPassword')}
-                      floatingLabelText={utils.translate('login.loginFloatingLabelTextPwd')}
-                      type='password' />
-                </TableRow>
-                <TableRow colSpan='3' style={{textAlign: 'center'}}>
-                    <Button
-                      ref='loginButton'
-                      onTouchTap={()=>this.handleLogin()}
-                      label={utils.translate('buttons.login')}
-                      disabled={viewModel.loginButtonDisabled}/>
-                </TableRow>
-              </TableBody>
-            </Table>
             <LinearProgress ref='progress' style={{visibility: viewModel.progressVisible}} mode="indeterminate"/>
           </CardActions>
         </Card>
